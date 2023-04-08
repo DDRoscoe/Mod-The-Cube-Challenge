@@ -8,16 +8,16 @@ public class Cube : MonoBehaviour
     
     void Start()
     {
-        transform.position = new Vector3(3, 4, 1);
-        transform.localScale = Vector3.one * 1.3f;
+        transform.position = new Vector3(-10, -10, 10);        // modified position
+        transform.localScale = Vector3.one * 3.0f;     // modified size (Vector3.one is shorthand for writing Vector3(1,1,1))
         
         Material material = Renderer.material;
         
-        material.color = new Color(0.5f, 1.0f, 0.3f, 0.4f);
+        material.color = new Color(0, 1, 1, 1);     // modified color
     }
     
     void Update()
     {
-        transform.Rotate(10.0f * Time.deltaTime, 0.0f, 0.0f);
+        transform.Rotate(100.0f * Time.deltaTime, -500.0f * Time.deltaTime, 75.0f * Time.deltaTime);       // modified rotation and speed
     }
 }
